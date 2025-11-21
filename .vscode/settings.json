@@ -5,6 +5,12 @@
                 "copilot/gpt-5-mini",
                 "copilot/auto"
             ]
+        },
+        "druzmaashfaq-website/.vscode/mcp.json: io.github.upstash/context7": {
+            "allowedModels": [
+                "copilot/auto",
+                "copilot/gpt-5-mini"
+            ]
         }
     }
 }

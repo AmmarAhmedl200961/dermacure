@@ -24,6 +24,7 @@ export default function Home() {
             priority
             className="object-cover object-center"
             sizes="100vw"
+            unoptimized
           />
           {/* Overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />

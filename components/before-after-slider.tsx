@@ -68,37 +68,33 @@ export function BeforeAfterSlider() {
             onMouseDown={handleMouseDown}
             onTouchStart={handleMouseDown}
           >
-            {/* After Image (Full Background) */}
+            {/* Before Image (Full Background) */}
             <div className="absolute inset-0">
               <Image
-                src="/before-after-acne.webp"
-                alt="After dermatology treatment - clear, healthy skin"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-                draggable={false}
-              />
-              <div className="absolute bottom-6 right-6 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-                After Treatment
-              </div>
-            </div>
-
-            {/* Before Image (Clipped) */}
-            <div 
-              className="absolute inset-0 overflow-hidden"
-              style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
-            >
-              <Image
-                src="/before-after-acne.webp"
+                src="/before-treatment.webp"
                 alt="Before dermatology treatment - acne-affected skin"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                 draggable={false}
+                unoptimized
               />
-              <div className="absolute bottom-6 left-6 bg-destructive text-destructive-foreground px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-                Before Treatment
-              </div>
+            </div>
+
+            {/* After Image (Clipped) */}
+            <div 
+              className="absolute inset-0 overflow-hidden"
+              style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+            >
+              <Image
+                src="/after-treatment.webp"
+                alt="After dermatology treatment - clear, healthy skin"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                draggable={false}
+                unoptimized
+              />
             </div>
 
             {/* Slider Handle */}

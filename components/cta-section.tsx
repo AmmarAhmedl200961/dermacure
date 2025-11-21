@@ -1,8 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, ExternalLink } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export function CtaSection() {
+  const handleBookingClick = () => {
+    trackEvent('click_booking', 'conversion', 'hero_cta');
+  };
+
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,6 +33,7 @@ export function CtaSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
                 aria-label="Book an appointment via WhatsApp"
+                onClick={handleBookingClick}
               >
                 Book an Appointment
                 <ExternalLink className="h-5 w-5" aria-hidden="true" />

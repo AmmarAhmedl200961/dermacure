@@ -1,16 +1,34 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Derma Cure - Expert Dermatology & Aesthetic Treatments in Lahore",
-  description: "Board-certified dermatologist offering comprehensive skin care: acne, eczema, psoriasis, fungal infection treatments, anti-aging procedures, laser therapy & aesthetic solutions. Serving Lahore with over 20 years of excellence.",
-  keywords: ["dermatology", "dermatologist", "skin care", "acne treatment", "fungal infection", "laser treatment", "aesthetic dermatology", "Lahore", "Derma Cure", "anti-aging", "skin rejuvenation"],
+  metadataBase: new URL('https://dermacure.vercel.app'),
+  title: "Derma Cure | Best Dermatologist in Lahore - Dr. Uzma Khalil",
+  description: "Board Certified Dermatologist specializing in Acne, Eczema, and Laser treatments. Book your consultation today.",
+  keywords: ["dermatology", "dermatologist", "skin care", "acne treatment", "fungal infection", "laser treatment", "aesthetic dermatology", "Lahore", "Derma Cure", "anti-aging", "skin rejuvenation", "Dr. Uzma Khalil", "best dermatologist Lahore"],
   authors: [{ name: "Derma Cure" }],
   openGraph: {
-    title: "Derma Cure - Expert Dermatology & Aesthetic Treatments",
-    description: "Transform your skin with professional dermatological care. Over 20 years of board-certified experience in Lahore.",
-    type: "website",
+    title: "Derma Cure | Best Dermatologist in Lahore - Dr. Uzma Khalil",
+    description: "Board Certified Dermatologist specializing in Acne, Eczema, and Laser treatments. Book your consultation today.",
+    url: "https://dermacure.vercel.app",
+    siteName: "Derma Cure",
+    images: [
+      {
+        url: "/hero-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Derma Cure - Professional Dermatology Clinic in Lahore",
+      },
+    ],
     locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Derma Cure | Best Dermatologist in Lahore - Dr. Uzma Khalil",
+    description: "Board Certified Dermatologist specializing in Acne, Eczema, and Laser treatments. Book your consultation today.",
+    images: ["/hero-banner.jpg"],
   },
   robots: {
     index: true,
@@ -76,6 +94,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <GoogleAnalytics gaId="G-2P87LRKM6R" />
         {children}
       </body>
     </html>

@@ -91,7 +91,7 @@ export function CtaSection() {
               <CardContent className="p-0">
                 <div className="aspect-[4/3] relative">
                   <iframe
-                    src="https://maps.google.com/maps?q=31.4121086,74.1580267&z=17&output=embed"
+                    src="https://maps.google.com/maps?q=31.412135,74.240428&z=17&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
